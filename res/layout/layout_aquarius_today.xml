@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <ImageView
+            android:id="@+id/imgAquariusToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/tvAquariusToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imgAquariusToday"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <TextView
+            android:id="@+id/tvAquariusTodayDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvAquariusToday"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+</RelativeLayout>

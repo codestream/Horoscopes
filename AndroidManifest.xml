@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.codestream.app.horoscopes"
+          android:versionCode="1"
+          android:versionName="1.1">
+    <uses-sdk android:minSdkVersion="8"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:name=".ui.HomeActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.today.AriesTodayActivity"/>
+        <activity android:name=".ui.week.AriesWeekActivity"/>
+        <activity android:name=".ui.month.AriesMonthActivity"/>
+        <activity android:name=".ui.year.AriesYearActivity"/>
+        <activity android:name=".ui.today.CancerTodayActivity"/>
+        <activity android:name=".ui.month.CancerMonthActivity"/>
+        <activity android:name=".ui.week.CancerWeekActivity"/>
+        <activity android:name=".ui.year.CancerYearActivity"/>
+        <activity android:name=".ui.today.TaurusTodayActivity"/>
+        <activity android:name=".ui.week.TaurusWeekActivity"/>
+        <activity android:name=".ui.month.TaurusMonthActivity"/>
+        <activity android:name=".ui.year.TaurusYearActivity"/>
+        <activity android:name=".ui.today.GeminiTodayActivity"/>
+        <activity android:name=".ui.month.GeminiMonthActivity"/>
+        <activity android:name=".ui.week.GeminiWeekActivity"/>
+        <activity android:name=".ui.year.GeminiYearActivity"/>
+        <activity android:name=".ui.today.LeoTodayActivity"/>
+        <activity android:name=".ui.month.LeoMonthActivity"/>
+        <activity android:name=".ui.week.LeoWeekActivity"/>
+        <activity android:name=".ui.year.LeoYearActivity"/>
+        <activity android:name=".ui.today.VirgoTodayActivity"/>
+        <activity android:name=".ui.week.VirgoWeekActivity"/>
+        <activity android:name=".ui.month.VirgoMonthActivity"/>
+        <activity android:name=".ui.year.VirgoYearActivity"/>
+        <activity android:name=".ui.today.LibraTodayActivity"/>
+        <activity android:name=".ui.month.LibraMonthActivity"/>
+        <activity android:name=".ui.week.LibraWeekActivity"/>
+        <activity android:name=".ui.year.LibraYearActivity"/>
+        <activity android:name=".ui.today.ScorpioTodayActivity"/>
+        <activity android:name=".ui.month.ScorpioMonthActivity"/>
+        <activity android:name=".ui.week.ScorpioWeekActivity"/>
+        <activity android:name=".ui.year.ScorpioYearActivity"/>
+        <activity android:name=".ui.today.SagittariusTodayActivity"/>
+        <activity android:name=".ui.month.SagittariusMonthActivity"/>
+        <activity android:name=".ui.week.SagittariusWeekActivity"/>
+        <activity android:name=".ui.year.SagittariusYearActivity"/>
+        <activity android:name=".ui.today.CapricornTodayActivity"/>
+        <activity android:name=".ui.week.CapricornWeekActivity"/>
+        <activity android:name=".ui.month.CapricornMonthActivity"/>
+        <activity android:name=".ui.year.CapricornYearActivity"/>
+        <activity android:name=".ui.today.AquariusTodayActivity"/>
+        <activity android:name=".ui.month.AquariusMonthActivity"/>
+        <activity android:name=".ui.week.AquariusWeekActivity"/>
+        <activity android:name=".ui.year.AquariusYearActivity"/>
+        <activity android:name=".ui.today.PiscesTodayActivity"/>
+        <activity android:name=".ui.month.PiscesMonthActivity"/>
+        <activity android:name=".ui.week.PiscesWeekActivity"/>
+        <activity android:name=".ui.year.PiscesYearActivity"/>
+    </application>
+</manifest> 

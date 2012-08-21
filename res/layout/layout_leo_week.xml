@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <ImageView
+            android:id="@+id/imgLeoWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/tvLeoWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imgLeoWeek"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:scrollbars="vertical"/>
+    <TextView
+            android:id="@+id/tvLeoWeekDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvLeoWeek"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:scrollbars="vertical"/>
+</RelativeLayout>

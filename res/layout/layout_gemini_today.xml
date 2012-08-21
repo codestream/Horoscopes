@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <ImageView
+            android:id="@+id/imgGeminiToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/tvGeminiToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imgGeminiToday"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <TextView
+            android:id="@+id/tvGeminiTodayDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvGeminiToday"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+</RelativeLayout>
