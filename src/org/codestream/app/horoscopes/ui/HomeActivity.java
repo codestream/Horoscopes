@@ -1,5 +1,6 @@
 package org.codestream.app.horoscopes.ui;
 
+import org.codestream.app.horoscopes.R;
 import org.codestream.app.horoscopes.ui.today.*;
 
 import android.app.Activity;
@@ -9,7 +10,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import ua.com.cupidplc.horoscopes.R;
 
 public class HomeActivity extends Activity{
     /** Called when the activity is first created. */

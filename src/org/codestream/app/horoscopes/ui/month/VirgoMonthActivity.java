@@ -15,13 +15,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import ua.com.cupidplc.horoscopes.R;
+import org.codestream.app.horoscopes.R;
 
 public class VirgoMonthActivity extends Activity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {

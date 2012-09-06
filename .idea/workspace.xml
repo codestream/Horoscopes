@@ -13,7 +13,60 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="" />
+    <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/HomeActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/HomeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/LeoMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/LeoMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/LibraMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/LibraMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/PiscesMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/PiscesMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/SagittariusMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/SagittariusMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/ScorpioMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/ScorpioMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/TaurusMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/TaurusMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/VirgoMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/VirgoMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/AquariusTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/AquariusTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/AriesTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/AriesTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/CancerTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/CancerTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/CapricornTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/CapricornTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/GeminiTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/GeminiTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LeoTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LeoTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LibraTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LibraTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/PiscesTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/PiscesTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/SagittariusTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/SagittariusTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/ScorpioTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/ScorpioTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/AquariusWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/AquariusWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/AriesWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/AriesWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CancerWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CancerWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/PiscesWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/PiscesWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AquariusYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AquariusYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AriesYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AriesYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CancerYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CancerYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CapricornYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CapricornYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java" />
+    </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,32 +122,77 @@
     <favorites_list name="Horoscope" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AquariusMonthActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="55" selection-start="1421" selection-end="1465" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AriesMonthActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="43" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="42" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.20987654">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/AriesYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/CancerYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/CapricornYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/GeminiYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/LeoYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/LibraYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/PiscesYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/SagittariusYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/ScorpioYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/TaurusYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/year/VirgoYearActivity.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/utils/DiskLruCache.java" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/utils/HoroscopeCaching.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/menu/choise_menu.xml" />
-        <option value="$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/AquariusMonthActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AquariusYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AriesYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CancerYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CapricornYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java" />
       </list>
     </option>
   </component>
@@ -104,7 +202,7 @@
     <option name="width" value="1032" />
     <option name="height" value="746" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -130,6 +228,66 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscopes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscopes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="horoscopes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscopes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="horoscopes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -154,16 +312,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horoscope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,13 +319,17 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -252,24 +404,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -295,6 +429,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -395,6 +547,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="false">C:\Documents and Settings\Saylar\Application Data\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="" />
@@ -435,6 +605,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -446,7 +617,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -511,88 +681,138 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/CapricornMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AquariusYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/GeminiMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AriesYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/LeoMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CancerYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/LibraMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CapricornYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/PiscesMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/SagittariusMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/ScorpioMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/TaurusMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/VirgoMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/today/AquariusTodayActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0" />
+        <state line="23" column="40" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/today/AriesTodayActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-1.532491" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/utils/DiskLruCache.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="30" selection-start="5238" selection-end="5238" vertical-scroll-proportion="0.0" />
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.24791086">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/utils/HoroscopeCaching.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/choise_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="465" selection-end="465" vertical-scroll-proportion="0.41975307">
+        <state line="42" column="55" selection-start="1421" selection-end="1465" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="579" selection-end="579" vertical-scroll-proportion="0.53968257">
+        <state line="24" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/com/cupidplc/horoscopes/ui/month/AquariusMonthActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="16" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.33754513">
+        <state line="22" column="43" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="42" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.20987654">
           <folding />
         </state>
       </provider>
