@@ -13,7 +13,9 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="" />
+    <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,57 +71,7 @@
     <favorites_list name="Horoscope" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AquariusMonthActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="55" selection-start="1421" selection-end="1465" vertical-scroll-proportion="1.3370787">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AriesMonthActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="43" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="42" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HoroscopeContract.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/provider/HoroscopeContract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -137,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AquariusYearActivity.java" />
@@ -152,6 +103,7 @@
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java" />
       </list>
     </option>
@@ -188,20 +140,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horoscope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horoscope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,6 +156,20 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Horoscopes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horoscope" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -619,139 +571,85 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/AriesYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CancerYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/CapricornYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="40" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.24791086">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="39" selection-start="803" selection-end="803" vertical-scroll-proportion="0.24791086" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="43" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.03068592" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="42" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="42" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.07054674" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/provider/HoroscopeContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="6" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.03068592" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="276" selection-end="276" vertical-scroll-proportion="0.20987654">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="55" selection-start="1421" selection-end="1465" vertical-scroll-proportion="1.3370787">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="82" selection-start="977" selection-end="977" vertical-scroll-proportion="0.03068592">
+          <folding />
         </state>
       </provider>
     </entry>
