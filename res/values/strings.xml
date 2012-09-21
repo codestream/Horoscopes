@@ -24,4 +24,5 @@
     <string name="save_this">Save this horoscope</string>
     <string name="back">Back</string>
     <string name="aries">Овен</string>
+    <string name="loading">Loading horoscopes</string>
 </resources>

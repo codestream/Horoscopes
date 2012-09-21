@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.month;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import org.codestream.app.horoscopes.R;
 import android.content.ContentValues;
 import android.content.Context;
@@ -29,7 +30,8 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_aquarius_month);
-        new AsyncAquariusMonthHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncAquariusMonthHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -49,13 +51,13 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
                 copyHoroscopeToClipboard();
                 return true;
             case R.id.putToCache:
-                putHoroToCache();
+                putHoroscopeToCache();
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    private void putHoroToCache(){
+    private void putHoroscopeToCache(){
         TextView textView = (TextView)findViewById(R.id.tvAquariusMonth);
         HoroscopeCaching horoscopeCaching = new HoroscopeCaching();
         try {
@@ -91,6 +93,22 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
     }
 
     private class AsyncAquariusMonthHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mProgressDialog;
+
+        private AsyncAquariusMonthHoroscope(Context mContext) {
+            this.mContext = mContext;
+            this.mProgressDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mProgressDialog.setTitle(R.string.loading);
+            mProgressDialog.setMessage("Please wait...");
+            mProgressDialog.setIndeterminate(true);
+            mProgressDialog.setCancelable(false);
+            mProgressDialog.show();
+        }
 
         private static final String TAG = "AsyncAquariusMonthHoroscope";
         @Override
@@ -114,6 +132,9 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
             TextView textView = (TextView)findViewById(R.id.tvAquariusMonth);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mProgressDialog.isShowing()){
+                mProgressDialog.dismiss();
+            }
         }
     }
 }
