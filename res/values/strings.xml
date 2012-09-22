@@ -25,4 +25,7 @@
     <string name="back">Back</string>
     <string name="aries">Овен</string>
     <string name="loading">Loading horoscopes</string>
+    <string name="copyright">Created by Viacheslav Okolitiy</string>
+    <string name="license">Apache 2.0 license</string>
+    <string name="send_feedback">Send feedback</string>
 </resources>

@@ -61,5 +61,6 @@
         <activity android:name=".ui.month.PiscesMonthActivity"/>
         <activity android:name=".ui.week.PiscesWeekActivity"/>
         <activity android:name=".ui.year.PiscesYearActivity"/>
+        <activity android:name=".ui.BaseActivity"/>
     </application>
 </manifest> 
