@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.today;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.ui.month.AquariusMonthActivity;
 import org.codestream.app.horoscopes.ui.week.AquariusWeekActivity;
 import org.codestream.app.horoscopes.ui.year.AquariusYearActivity;
@@ -27,11 +29,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class AquariusTodayActivity extends Activity implements HoroscopeClipboard {
-    public void onCreate(Bundle savedInstanceState) {
+public class AquariusTodayActivity extends BaseActivity implements HoroscopeClipboard {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_aquarius_today);
-        new AsyncAquariusHoroscope().execute();
     }
 
     @Override
@@ -41,9 +43,6 @@ public class AquariusTodayActivity extends Activity implements HoroscopeClipboar
         return true;
     }
 
-    /* (non-Javadoc)
-	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-	 */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
@@ -57,13 +56,13 @@ public class AquariusTodayActivity extends Activity implements HoroscopeClipboar
                 onYearAquariusClick();
                 return true;
             case R.id.save:
-                onSaveAquariusClick();
+                saveCurrentHoroscope();
                 return true;
             case R.id.toClipboard:
                 copyHoroscopeToClipboard();
                 return true;
             default:
-                return super.onOptionsItemSelected(item);
+                return true;
         }
     }
 
@@ -82,7 +81,13 @@ public class AquariusTodayActivity extends Activity implements HoroscopeClipboar
         startActivity(intent);
     }
 
-    private void onSaveAquariusClick(){
+    @Override
+    protected void cacheCurrentHoroscope() {
+
+    }
+
+    @Override
+    protected void saveCurrentHoroscope() {
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(AquariusTodayActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvAquariusToday);
@@ -95,7 +100,8 @@ public class AquariusTodayActivity extends Activity implements HoroscopeClipboar
         toast.show();
     }
 
-    public void copyHoroscopeToClipboard(){
+    @Override
+    public void copyHoroscopeToClipboard() {
         TextView textView = (TextView)findViewById(R.id.tvAquariusToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
         clipboardManager.setText(textView.getText());
@@ -106,7 +112,24 @@ public class AquariusTodayActivity extends Activity implements HoroscopeClipboar
 
     private class AsyncAquariusHoroscope extends AsyncTask<Void,Integer,String> {
 
+        private Context mContext;
+        private ProgressDialog mDialog;
         private static final String TAG = "AsyncAquariusHoroscope";
+
+        public AsyncAquariusHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait....");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
+
         @Override
         protected String doInBackground(Void... voids) {
             final String url = "http://goroskop.online.ua/aquarius/";
@@ -125,9 +148,13 @@ public class AquariusTodayActivity extends Activity implements HoroscopeClipboar
 
         @Override
         protected void onPostExecute(String result) {
+            super.onPostExecute(result);
             TextView textView = (TextView)findViewById(R.id.tvAquariusToday);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
