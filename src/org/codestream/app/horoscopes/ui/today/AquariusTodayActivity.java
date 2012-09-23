@@ -34,6 +34,8 @@ public class AquariusTodayActivity extends BaseActivity implements HoroscopeClip
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_aquarius_today);
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncAquariusHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override

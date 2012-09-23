@@ -32,7 +32,9 @@ public abstract class BaseActivity extends Activity {
     }
 
     @Override
-    public abstract boolean onOptionsItemSelected(MenuItem item);
+    public boolean onOptionsItemSelected(MenuItem item){
+        return true;
+    }
 
     public boolean setupMenuOptionItemSelected(MenuItem item){
         return true;

@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.today;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.ui.month.CapricornMonthActivity;
 import org.codestream.app.horoscopes.ui.week.CapricornWeekActivity;
 import org.codestream.app.horoscopes.ui.year.CapricornYearActivity;
@@ -27,11 +29,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class CapricornTodayActivity extends Activity implements HoroscopeClipboard {
+public class CapricornTodayActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_capricorn_today);
-        new AsyncCapricornHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncCapricornHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -57,7 +60,7 @@ public class CapricornTodayActivity extends Activity implements HoroscopeClipboa
                 onYearCapricornClick();
                 return true;
             case R.id.save:
-                onSaveCapricornClick();
+                saveCurrentHoroscope();
                 return true;
             case R.id.toClipboard:
                 copyHoroscopeToClipboard();
@@ -65,6 +68,25 @@ public class CapricornTodayActivity extends Activity implements HoroscopeClipboa
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    protected void saveCurrentHoroscope() {
+        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(CapricornTodayActivity.this);
+        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
+        TextView textView = (TextView)findViewById(R.id.tvCapricornToday);
+        final ContentValues contentValues = new ContentValues();
+        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
+        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
+        sqLiteDatabase.close();
+        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
+        toast.setGravity(Gravity.CENTER,0,1);
+        toast.show();
     }
 
     private void onCapricornWeekClick(){
@@ -82,19 +104,6 @@ public class CapricornTodayActivity extends Activity implements HoroscopeClipboa
         startActivity(intent);
     }
 
-    private void onSaveCapricornClick(){
-        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(CapricornTodayActivity.this);
-        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
-        TextView textView = (TextView)findViewById(R.id.tvCapricornToday);
-        final ContentValues contentValues = new ContentValues();
-        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
-        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
-        sqLiteDatabase.close();
-        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
-        toast.setGravity(Gravity.CENTER,0,1);
-        toast.show();
-    }
-
     public void copyHoroscopeToClipboard(){
         TextView textView = (TextView)findViewById(R.id.tvCapricornToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -107,6 +116,23 @@ public class CapricornTodayActivity extends Activity implements HoroscopeClipboa
     private class AsyncCapricornHoroscope extends AsyncTask<Void,Integer,String> {
 
         private static final String TAG = "AsyncCapricornHoroscope";
+
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        private AsyncCapricornHoroscope(Context context) {
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait...");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
         @Override
         protected String doInBackground(Void... voids) {
             final String url = "http://goroskop.online.ua/capricorn/";
@@ -128,6 +154,9 @@ public class CapricornTodayActivity extends Activity implements HoroscopeClipboa
             TextView textView = (TextView)findViewById(R.id.tvCapricornToday);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }

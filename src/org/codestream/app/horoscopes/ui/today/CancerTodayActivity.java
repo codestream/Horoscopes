@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.today;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.ui.month.CancerMonthActivity;
 import org.codestream.app.horoscopes.ui.week.CancerWeekActivity;
 import org.codestream.app.horoscopes.ui.year.CancerYearActivity;
@@ -27,11 +29,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class CancerTodayActivity extends Activity implements HoroscopeClipboard {
+public class CancerTodayActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_cancer_today);
-        new AsyncCancerHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncCancerHoroscope(this);
+        asyncTask.execute();
     }
 
     /* (non-Javadoc)
@@ -60,7 +63,7 @@ public class CancerTodayActivity extends Activity implements HoroscopeClipboard 
                 onYearCancerClick();
                 return true;
             case R.id.save:
-                onSaveCancerClick();
+                saveCurrentHoroscope();
                 return true;
             case R.id.toClipboard:
                 copyHoroscopeToClipboard();
@@ -69,6 +72,26 @@ public class CancerTodayActivity extends Activity implements HoroscopeClipboard 
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    protected void saveCurrentHoroscope() {
+        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(CancerTodayActivity.this);
+        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
+        TextView textView = (TextView)findViewById(R.id.tvCancerToday);
+        final ContentValues contentValues = new ContentValues();
+        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
+        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
+        sqLiteDatabase.close();
+        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
+        toast.setGravity(Gravity.CENTER,0,1);
+        toast.show();
+    }
+
 
     private void onCancerWeekClick(){
         final Intent weekCancerIntent = new Intent(getApplicationContext(),CancerWeekActivity.class);
@@ -85,19 +108,6 @@ public class CancerTodayActivity extends Activity implements HoroscopeClipboard 
         startActivity(intent);
     }
 
-    private void onSaveCancerClick(){
-        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(CancerTodayActivity.this);
-        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
-        TextView textView = (TextView)findViewById(R.id.tvCancerToday);
-        final ContentValues contentValues = new ContentValues();
-        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
-        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
-        sqLiteDatabase.close();
-        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
-        toast.setGravity(Gravity.CENTER,0,1);
-        toast.show();
-    }
-
     public void copyHoroscopeToClipboard(){
         TextView textView = (TextView)findViewById(R.id.tvCancerToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -108,6 +118,23 @@ public class CancerTodayActivity extends Activity implements HoroscopeClipboard 
     }
 
     private class AsyncCancerHoroscope extends AsyncTask<Void,Integer,String> {
+
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        private AsyncCancerHoroscope(Context context) {
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait...");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncCancerHoroscope";
         @Override
@@ -131,6 +158,9 @@ public class CancerTodayActivity extends Activity implements HoroscopeClipboard 
             TextView textView = (TextView)findViewById(R.id.tvCancerToday);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
