@@ -15,7 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java" />
     </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,10 +118,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaurusTodayActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TaurusTodayActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="28" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.28651685">
+            <state line="135" column="12" selection-start="4818" selection-end="5094" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VirgoTodayActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="8" selection-start="5072" selection-end="5072" vertical-scroll-proportion="1.082397">
               <folding />
             </state>
           </provider>
@@ -145,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/layout_about.xml" />
@@ -161,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/SagittariusTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/ScorpioTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java" />
       </list>
     </option>
   </component>
@@ -621,7 +630,11 @@
       <created>1348434053359</created>
       <updated>1348434053359</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add some changes to taurus activity">
+      <created>1348434312390</created>
+      <updated>1348434312390</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -710,7 +723,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some changes to another activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some changes to taurus activity" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -731,6 +744,7 @@
     <MESSAGE value="Add some changes" />
     <MESSAGE value="Add some changes to one activity" />
     <MESSAGE value="Add some changes to another activity" />
+    <MESSAGE value="Add some changes to taurus activity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -740,11 +754,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/provider/HoroscopeContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="3901" selection-end="3901" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="55" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0" />
@@ -829,7 +838,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.28651685">
+        <state line="135" column="12" selection-start="4818" selection-end="5094" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="8" selection-start="5072" selection-end="5072" vertical-scroll-proportion="1.082397">
           <folding />
         </state>
       </provider>
