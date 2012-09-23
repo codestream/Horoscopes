@@ -15,8 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java" />
     </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,10 +103,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeminiWeekActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GeminiWeekActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="28" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-2.3108613">
+            <state line="128" column="31" selection-start="4898" selection-end="4898" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeoWeekActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="28" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraWeekActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="28" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.28651685">
               <folding />
             </state>
           </provider>
@@ -139,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/CancerTodayActivity.java" />
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/CapricornTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/GeminiTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LeoTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LibraTodayActivity.java" />
@@ -155,6 +171,8 @@
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CancerWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java" />
       </list>
     </option>
   </component>
@@ -635,7 +653,11 @@
       <created>1348440624140</created>
       <updated>1348440624140</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Some UI changes">
+      <created>1348441006375</created>
+      <updated>1348441006375</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -758,16 +780,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/GeminiTodayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="10" selection-start="4819" selection-end="5095" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/PiscesTodayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.28651685" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LibraTodayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="10" selection-start="4730" selection-end="5006" vertical-scroll-proportion="0.0" />
@@ -853,7 +865,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-2.3108613">
+        <state line="128" column="31" selection-start="4898" selection-end="4898" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LeoWeekActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.28651685">
           <folding />
         </state>
       </provider>
