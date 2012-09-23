@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.today;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.ui.month.ScorpioMonthActivity;
 import org.codestream.app.horoscopes.ui.week.ScorpioWeekActivity;
 import org.codestream.app.horoscopes.ui.year.ScorpioYearActivity;
@@ -27,11 +29,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class ScorpioTodayActivity extends Activity implements HoroscopeClipboard {
+public class ScorpioTodayActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_scorio_today);
-        new AsyncScorpioHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncScorpioHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -57,7 +60,7 @@ public class ScorpioTodayActivity extends Activity implements HoroscopeClipboard
                 onYearScorpioClick();
                 return true;
             case R.id.save:
-                onSaveScorpioClick();
+                saveCurrentHoroscope();
                 return true;
             case R.id.toClipboard:
                 copyHoroscopeToClipboard();
@@ -65,6 +68,25 @@ public class ScorpioTodayActivity extends Activity implements HoroscopeClipboard
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    protected void saveCurrentHoroscope() {
+        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(ScorpioTodayActivity.this);
+        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
+        TextView textView = (TextView)findViewById(R.id.tvScorpioToday);
+        final ContentValues contentValues = new ContentValues();
+        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
+        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
+        sqLiteDatabase.close();
+        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
+        toast.setGravity(Gravity.CENTER,0,1);
+        toast.show();
     }
 
     private void onScorpioWeekClick(){
@@ -82,19 +104,6 @@ public class ScorpioTodayActivity extends Activity implements HoroscopeClipboard
         startActivity(intent);
     }
 
-    private void onSaveScorpioClick(){
-        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(ScorpioTodayActivity.this);
-        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
-        TextView textView = (TextView)findViewById(R.id.tvScorpioToday);
-        final ContentValues contentValues = new ContentValues();
-        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
-        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
-        sqLiteDatabase.close();
-        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
-        toast.setGravity(Gravity.CENTER,0,1);
-        toast.show();
-    }
-
     public void copyHoroscopeToClipboard(){
         TextView textView = (TextView)findViewById(R.id.tvScorpioToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -105,6 +114,22 @@ public class ScorpioTodayActivity extends Activity implements HoroscopeClipboard
     }
 
     private class AsyncScorpioHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncScorpioHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait...");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncScorpioHoroscope";
         @Override
@@ -128,6 +153,9 @@ public class ScorpioTodayActivity extends Activity implements HoroscopeClipboard
             TextView textView = (TextView)findViewById(R.id.tvScorpioToday);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
