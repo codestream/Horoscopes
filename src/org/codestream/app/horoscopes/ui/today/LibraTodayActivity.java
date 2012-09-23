@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.today;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.ui.month.LibraMonthActivity;
 import org.codestream.app.horoscopes.ui.week.LibraWeekActivity;
 import org.codestream.app.horoscopes.ui.year.LibraYearActivity;
@@ -27,11 +29,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class LibraTodayActivity extends Activity implements HoroscopeClipboard {
+public class LibraTodayActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_libra_today);
-        new AsyncLibraHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncLibraHoroscope(this);
+        asyncTask.execute();
     }
 
     /* (non-Javadoc)
@@ -60,7 +63,7 @@ public class LibraTodayActivity extends Activity implements HoroscopeClipboard {
                 onYearLibraClick();
                 return true;
             case R.id.save:
-                onSaveLibraClick();
+                saveCurrentHoroscope();
                 return true;
             case R.id.toClipboard:
                 copyHoroscopeToClipboard();
@@ -68,6 +71,25 @@ public class LibraTodayActivity extends Activity implements HoroscopeClipboard {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    protected void saveCurrentHoroscope() {
+        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(LibraTodayActivity.this);
+        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
+        TextView textView = (TextView)findViewById(R.id.tvLibraToday);
+        final ContentValues contentValues = new ContentValues();
+        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
+        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
+        sqLiteDatabase.close();
+        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
+        toast.setGravity(Gravity.CENTER,0,1);
+        toast.show();
     }
 
     private void onLibraWeekClick(){
@@ -85,19 +107,6 @@ public class LibraTodayActivity extends Activity implements HoroscopeClipboard {
         startActivity(intent);
     }
 
-    private void onSaveLibraClick(){
-        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(LibraTodayActivity.this);
-        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
-        TextView textView = (TextView)findViewById(R.id.tvLibraToday);
-        final ContentValues contentValues = new ContentValues();
-        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
-        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
-        sqLiteDatabase.close();
-        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
-        toast.setGravity(Gravity.CENTER,0,1);
-        toast.show();
-    }
-
     public void copyHoroscopeToClipboard(){
         TextView textView = (TextView)findViewById(R.id.tvLibraToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -108,6 +117,22 @@ public class LibraTodayActivity extends Activity implements HoroscopeClipboard {
     }
 
     private class AsyncLibraHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncLibraHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait...");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncLibraHoroscope";
         @Override
@@ -131,6 +156,9 @@ public class LibraTodayActivity extends Activity implements HoroscopeClipboard {
             TextView textView = (TextView)findViewById(R.id.tvLibraToday);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
