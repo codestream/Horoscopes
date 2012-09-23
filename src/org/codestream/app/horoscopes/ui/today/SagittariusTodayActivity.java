@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.today;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.ui.month.SagittariusMonthActivity;
 import org.codestream.app.horoscopes.ui.week.SagittariusWeekActivity;
 import org.codestream.app.horoscopes.ui.year.SagittariusYearActivity;
@@ -27,11 +29,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class SagittariusTodayActivity extends Activity implements HoroscopeClipboard {
+public class SagittariusTodayActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_sagittarius_today);
-        new AsyncSagittariusHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncSagittariusHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -57,7 +60,7 @@ public class SagittariusTodayActivity extends Activity implements HoroscopeClipb
                 onYearSagittariusClick();
                 return true;
             case R.id.save:
-                onSaveSagittariusClick();
+                saveCurrentHoroscope();
                 return true;
             case R.id.toClipboard:
                 copyHoroscopeToClipboard();
@@ -65,6 +68,25 @@ public class SagittariusTodayActivity extends Activity implements HoroscopeClipb
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    protected void saveCurrentHoroscope() {
+        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(SagittariusTodayActivity.this);
+        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
+        TextView textView = (TextView)findViewById(R.id.tvSagittariusToday);
+        final ContentValues contentValues = new ContentValues();
+        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
+        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
+        sqLiteDatabase.close();
+        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
+        toast.setGravity(Gravity.CENTER,0,1);
+        toast.show();
     }
 
     private void onSagittariusWeekClick(){
@@ -82,19 +104,6 @@ public class SagittariusTodayActivity extends Activity implements HoroscopeClipb
         startActivity(intent);
     }
 
-    private void onSaveSagittariusClick(){
-        HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(SagittariusTodayActivity.this);
-        SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
-        TextView textView = (TextView)findViewById(R.id.tvSagittariusToday);
-        final ContentValues contentValues = new ContentValues();
-        contentValues.put("TODAY_HOROSCOPE",textView.getText().toString());
-        sqLiteDatabase.insert(HoroscopeDatabase.Tables.TODAY,null,contentValues);
-        sqLiteDatabase.close();
-        Toast toast = Toast.makeText(getApplicationContext(),"Successfully saved",200);
-        toast.setGravity(Gravity.CENTER,0,1);
-        toast.show();
-    }
-
     public void copyHoroscopeToClipboard(){
         TextView textView = (TextView)findViewById(R.id.tvSagittariusToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -105,6 +114,22 @@ public class SagittariusTodayActivity extends Activity implements HoroscopeClipb
     }
 
     private class AsyncSagittariusHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncSagittariusHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait...");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncSagittariusHoroscope";
         @Override
@@ -128,6 +153,9 @@ public class SagittariusTodayActivity extends Activity implements HoroscopeClipb
             TextView textView = (TextView)findViewById(R.id.tvSagittariusToday);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
