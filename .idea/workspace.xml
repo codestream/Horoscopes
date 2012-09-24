@@ -15,10 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/GeminiYearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LeoYearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/LibraYearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java" />
     </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,7 +111,7 @@
       <file leaf-file-name="PiscesYearActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="28" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.28651685">
+            <state line="27" column="64" selection-start="958" selection-end="958" vertical-scroll-proportion="0.12734082">
               <folding />
             </state>
           </provider>
@@ -705,7 +701,11 @@
       <created>1348507462593</created>
       <updated>1348507462593</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Final stage of refactoring for milestone current milestone">
+      <created>1348507992265</created>
+      <updated>1348507992265</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -932,7 +932,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/PiscesYearActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.28651685">
+        <state line="27" column="64" selection-start="958" selection-end="958" vertical-scroll-proportion="0.12734082">
           <folding />
         </state>
       </provider>
