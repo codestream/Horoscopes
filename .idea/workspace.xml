@@ -15,10 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/SagittariusYearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/ScorpioYearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/TaurusYearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/year/VirgoYearActivity.java" />
     </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -749,7 +745,11 @@
       <created>1348508094734</created>
       <updated>1348508094734</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Prepare to release 1.0.1 version">
+      <created>1348508877390</created>
+      <updated>1348508877390</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -838,7 +838,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final stage of refactoring for milestone current milestone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare to release 1.0.1 version" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -870,6 +870,7 @@
     <MESSAGE value="Some changes" />
     <MESSAGE value="75%" />
     <MESSAGE value="Final stage of refactoring for milestone current milestone" />
+    <MESSAGE value="Prepare to release 1.0.1 version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
