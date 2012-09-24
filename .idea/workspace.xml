@@ -15,7 +15,9 @@
   <component name="ChangeListManager">
     <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" />
     </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,10 +84,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SagittariusWeekActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SagittariusWeekActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="28" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.2761733">
+            <state line="32" column="28" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScorpioWeekActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaurusWeekActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="28" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VirgoWeekActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="28" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.28651685">
               <folding />
             </state>
           </provider>
@@ -109,9 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/LibraTodayActivity.java" />
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/PiscesTodayActivity.java" />
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/SagittariusTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/ScorpioTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java" />
@@ -125,6 +151,9 @@
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/LibraWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/PiscesWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java" />
       </list>
     </option>
   </component>
@@ -617,7 +646,11 @@
       <created>1348441589421</created>
       <updated>1348441589421</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Continue refactoring">
+      <created>1348496720859</created>
+      <updated>1348496720859</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -652,6 +685,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -663,7 +697,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -706,7 +739,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some small UI changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continue refactoring" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -732,6 +765,7 @@
     <MESSAGE value="Add some changes" />
     <MESSAGE value="Some UI changes" />
     <MESSAGE value="Some small UI changes" />
+    <MESSAGE value="Continue refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -741,21 +775,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/ScorpioTodayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="28" selection-start="4736" selection-end="4940" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/TaurusTodayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="12" selection-start="4818" selection-end="5094" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/today/VirgoTodayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="8" selection-start="5072" selection-end="5072" vertical-scroll-proportion="1.0433213" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.12274368" />
@@ -820,7 +839,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/SagittariusWeekActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.2761733">
+        <state line="32" column="28" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/ScorpioWeekActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/TaurusWeekActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/VirgoWeekActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.28651685">
           <folding />
         </state>
       </provider>
