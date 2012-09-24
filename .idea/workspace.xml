@@ -15,9 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="322ccc01-868f-4427-b4ac-3e0f8b4abd4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java" afterPath="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java" />
     </list>
     <ignored path="Horoscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,10 +92,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CancerMonthActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CancerMonthActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="-2.1299639">
+            <state line="31" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CapricornMonthActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="28" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeminiMonthActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.28651685">
               <folding />
             </state>
           </provider>
@@ -120,8 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/AquariusWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/AriesWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CancerWeekActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java" />
@@ -136,6 +151,8 @@
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AquariusMonthActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/AriesMonthActivity.java" />
         <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java" />
       </list>
     </option>
   </component>
@@ -636,7 +653,11 @@
       <created>1348497213671</created>
       <updated>1348497213671</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Still a lot of work">
+      <created>1348497649421</created>
+      <updated>1348497649421</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -725,7 +746,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="1/2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Still a lot of work" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -753,6 +774,7 @@
     <MESSAGE value="Some small UI changes" />
     <MESSAGE value="Continue refactoring" />
     <MESSAGE value="1/2" />
+    <MESSAGE value="Still a lot of work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -762,16 +784,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CancerWeekActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="60" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/CapricornWeekActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/week/GeminiWeekActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="31" selection-start="4898" selection-end="4898" vertical-scroll-proportion="0.0" />
@@ -859,7 +871,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CancerMonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="-2.1299639">
+        <state line="31" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/CapricornMonthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="28" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/codestream/app/horoscopes/ui/month/GeminiMonthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="28" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.28651685">
           <folding />
         </state>
       </provider>
