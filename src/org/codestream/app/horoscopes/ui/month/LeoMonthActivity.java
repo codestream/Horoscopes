@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.month;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,17 +17,19 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class LeoMonthActivity extends Activity implements HoroscopeClipboard {
+public class LeoMonthActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_leo_month);
-        new AsyncLeoMonthHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncLeoMonthHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -50,7 +53,12 @@ public class LeoMonthActivity extends Activity implements HoroscopeClipboard {
         }
     }
 
-    private void saveCurrentHoroscope(){
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    protected void saveCurrentHoroscope(){
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(LeoMonthActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvLeoMonth);
@@ -73,6 +81,22 @@ public class LeoMonthActivity extends Activity implements HoroscopeClipboard {
     }
 
     private class AsyncLeoMonthHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncLeoMonthHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait....");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncLeoMonthHoroscope";
         @Override
@@ -96,6 +120,9 @@ public class LeoMonthActivity extends Activity implements HoroscopeClipboard {
             TextView textView = (TextView)findViewById(R.id.tvLeoMonth);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }

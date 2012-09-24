@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.month;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,17 +17,19 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class PiscesMonthActivity extends Activity implements HoroscopeClipboard {
+public class PiscesMonthActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_pisces_month);
-        new AsyncPiscesMonthHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncPiscesMonthHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -50,7 +53,12 @@ public class PiscesMonthActivity extends Activity implements HoroscopeClipboard 
         }
     }
 
-    private void saveCurrentHoroscope(){
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    protected void saveCurrentHoroscope(){
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(PiscesMonthActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvPiscesMonth);
@@ -73,6 +81,13 @@ public class PiscesMonthActivity extends Activity implements HoroscopeClipboard 
     }
 
     private class AsyncPiscesMonthHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncPiscesMonthHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
 
         private static final String TAG = "AsyncPiscesMonthHoroscope";
         @Override
@@ -96,6 +111,9 @@ public class PiscesMonthActivity extends Activity implements HoroscopeClipboard 
             TextView textView = (TextView)findViewById(R.id.tvPiscesMonth);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
