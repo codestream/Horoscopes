@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.year;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,17 +18,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class LeoYearActivity extends Activity implements HoroscopeClipboard {
+public class LeoYearActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_leo_year);
-        new AsyncLeoYearHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncLeoYearHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -51,6 +54,11 @@ public class LeoYearActivity extends Activity implements HoroscopeClipboard {
         }
     }
 
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     public void copyHoroscopeToClipboard() {
         TextView textView = (TextView)findViewById(R.id.tvLeoYear);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -60,7 +68,7 @@ public class LeoYearActivity extends Activity implements HoroscopeClipboard {
         toast.show();
     }
 
-    private void saveCurrentHoroscope(){
+    protected void saveCurrentHoroscope(){
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(LeoYearActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvLeoYear);
@@ -74,6 +82,22 @@ public class LeoYearActivity extends Activity implements HoroscopeClipboard {
     }
 
     private class AsyncLeoYearHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mProgressDialog;
+
+        public AsyncLeoYearHoroscope(Context context){
+            this.mContext = context;
+            this.mProgressDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mProgressDialog.setTitle(R.string.loading);
+            mProgressDialog.setMessage("Please wait...");
+            mProgressDialog.setIndeterminate(true);
+            mProgressDialog.setCancelable(false);
+            mProgressDialog.show();
+        }
 
         private static final String TAG = "AsyncLeoYearHoroscope";
         @Override
@@ -97,6 +121,9 @@ public class LeoYearActivity extends Activity implements HoroscopeClipboard {
             TextView textView = (TextView)findViewById(R.id.tvLeoYear);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mProgressDialog.isShowing()){
+                mProgressDialog.dismiss();
+            }
         }
     }
 }
