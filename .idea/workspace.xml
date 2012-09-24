@@ -749,7 +749,11 @@
       <created>1348508877390</created>
       <updated>1348508877390</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Prepare to release 1.0.1 version">
+      <created>1348508907562</created>
+      <updated>1348508907562</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
