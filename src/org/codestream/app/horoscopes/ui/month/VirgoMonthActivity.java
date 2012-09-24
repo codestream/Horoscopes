@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.month;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,16 +17,19 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class VirgoMonthActivity extends Activity implements HoroscopeClipboard {
+public class VirgoMonthActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_virgo_month);
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncVirgoMonthHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -49,6 +53,11 @@ public class VirgoMonthActivity extends Activity implements HoroscopeClipboard {
         }
     }
 
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     public void copyHoroscopeToClipboard() {
         TextView textView = (TextView)findViewById(R.id.tvVirgoMonth);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
@@ -58,7 +67,7 @@ public class VirgoMonthActivity extends Activity implements HoroscopeClipboard {
         toast.show();
     }
 
-    private void saveCurrentHoroscope(){
+    protected void saveCurrentHoroscope(){
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(VirgoMonthActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvVirgoMonth);
@@ -72,6 +81,22 @@ public class VirgoMonthActivity extends Activity implements HoroscopeClipboard {
     }
 
     private class AsyncVirgoMonthHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncVirgoMonthHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait....");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncVirgoMonthHoroscope";
         @Override
@@ -95,6 +120,9 @@ public class VirgoMonthActivity extends Activity implements HoroscopeClipboard {
             TextView textView = (TextView)findViewById(R.id.tvVirgoMonth);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
