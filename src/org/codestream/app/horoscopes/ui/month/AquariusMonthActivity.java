@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.utils.HoroscopeCaching;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
@@ -26,7 +27,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class AquariusMonthActivity extends Activity implements HoroscopeClipboard{
+public class AquariusMonthActivity extends BaseActivity implements HoroscopeClipboard{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_aquarius_month);
@@ -57,6 +58,11 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
         }
     }
 
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     private void putHoroscopeToCache(){
         TextView textView = (TextView)findViewById(R.id.tvAquariusMonth);
         HoroscopeCaching horoscopeCaching = new HoroscopeCaching();
@@ -70,7 +76,7 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
         }
     }
 
-    private void saveCurrentHoroscope(){
+    protected void saveCurrentHoroscope(){
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(AquariusMonthActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvAquariusMonth);
@@ -96,8 +102,8 @@ public class AquariusMonthActivity extends Activity implements HoroscopeClipboar
         private Context mContext;
         private ProgressDialog mProgressDialog;
 
-        private AsyncAquariusMonthHoroscope(Context mContext) {
-            this.mContext = mContext;
+        private AsyncAquariusMonthHoroscope(Context context) {
+            this.mContext = context;
             this.mProgressDialog = new ProgressDialog(mContext);
         }
 
