@@ -1,6 +1,7 @@
 package org.codestream.app.horoscopes.ui.week;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,17 +18,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.codestream.app.horoscopes.provider.HoroscopeDatabase;
+import org.codestream.app.horoscopes.ui.BaseActivity;
 import org.codestream.app.horoscopes.utils.HoroscopeClipboard;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.codestream.app.horoscopes.R;
 
-public class SagittariusWeekActivity extends Activity implements HoroscopeClipboard {
+public class SagittariusWeekActivity extends BaseActivity implements HoroscopeClipboard {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_sagittarius_week);
-        new AsyncSagittariusWeekHoroscope().execute();
+        AsyncTask<Void,Integer,String> asyncTask = new AsyncSagittariusWeekHoroscope(this);
+        asyncTask.execute();
     }
 
     @Override
@@ -51,7 +54,13 @@ public class SagittariusWeekActivity extends Activity implements HoroscopeClipbo
         }
     }
 
-    private void saveCurrentHoroscope(){
+    @Override
+    protected void cacheCurrentHoroscope() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    protected void saveCurrentHoroscope(){
         HoroscopeDatabase horoscopeDatabase = new HoroscopeDatabase(SagittariusWeekActivity.this);
         SQLiteDatabase sqLiteDatabase = horoscopeDatabase.getWritableDatabase();
         TextView textView = (TextView)findViewById(R.id.tvSagittariusWeek);
@@ -74,6 +83,22 @@ public class SagittariusWeekActivity extends Activity implements HoroscopeClipbo
     }
 
     private class AsyncSagittariusWeekHoroscope extends AsyncTask<Void,Integer,String> {
+        private Context mContext;
+        private ProgressDialog mDialog;
+
+        public AsyncSagittariusWeekHoroscope(Context context){
+            this.mContext = context;
+            this.mDialog = new ProgressDialog(mContext);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            mDialog.setTitle("Loading horoscopes");
+            mDialog.setMessage("Please wait....");
+            mDialog.setIndeterminate(false);
+            mDialog.setCancelable(false);
+            mDialog.show();
+        }
 
         private static final String TAG = "AsyncSagittariusHoroscope";
         @Override
@@ -98,6 +123,9 @@ public class SagittariusWeekActivity extends Activity implements HoroscopeClipbo
             TextView textView = (TextView)findViewById(R.id.tvSagittariusWeek);
             textView.setMovementMethod(new ScrollingMovementMethod());
             textView.setText(result);
+            if(mDialog.isShowing()){
+                mDialog.dismiss();
+            }
         }
     }
 }
