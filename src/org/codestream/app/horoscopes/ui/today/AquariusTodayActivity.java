@@ -102,7 +102,6 @@ public class AquariusTodayActivity extends BaseActivity implements HoroscopeClip
         toast.show();
     }
 
-    @Override
     public void copyHoroscopeToClipboard() {
         TextView textView = (TextView)findViewById(R.id.tvAquariusToday);
         ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);

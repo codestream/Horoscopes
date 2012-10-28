@@ -48,7 +48,6 @@ public abstract class BaseActivity extends Activity {
         dialog.setTitle(getResources().getString(R.string.app_name) + " v" + stringVersion);
         Button button = (Button)dialog.findViewById(R.id.feedbackButton);
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"okolitiy.viacheslav@gmail.com"});
